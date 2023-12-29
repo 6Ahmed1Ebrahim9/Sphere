@@ -1,18 +1,36 @@
 {% load static tailwind_tags %}
 <html>
 <head>
-    <title>CRUD</title>
+    <meta charset="UTF-8">
+
+    <title>Sphere</title>
+    
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 {% tailwind_css %}
 
-<h1>
-    Hello World!
-</h1>
+<body>
+
+    <!-- Create Navbar here -->
+
+    <div class="container mx-auto">
+
+        <br>
+
+        <!-- Notification messages -->
 
 
-<p> this is the Create</a> </p>
+        {% block content %}
 
 
 
+        {% endblock %}
 
+    </div>
+
+
+    <script src="{% static 'app.js' %}"></script>
+
+
+</body>    
 </html>
