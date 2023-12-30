@@ -1,0 +1,25 @@
+<div class="navbar bg-base-300">
+    <div class="navbar-start">
+        <div class="dropdown group">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"></path>
+                    <path :class="{'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content hidden group-hover:flex mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a class="btn btn-ghost bg-primary-content" href="{% url 'login' %}">SignIn</a></li>
+                <li><a class="btn" href="{% url 'register' %}">SignUp</a></li>
+            </ul>
+        </div>
+        <a class="btn btn-ghost text-xl" href="{% url '' %}">
+            <img src="https://flowbite.com/docs/images/logo.svg" alt="logo" class="h-10 w-10">
+            Sphere
+        </a>
+    </div>
+    <div class="navbar-end hidden lg:flex">
+        <a class="btn btn-outline mr-4" href="{% url 'login' %}">SignIn</a>
+        <a class="btn btn-outline" href="{% url 'register' %}">SignUp</a>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+{% extends 'crud_main/base.html' %}
+
+{% block content %}
+
+<section>
+    <div class="flex justify-center min-h-screen py-12  sm:px-6 lg:px-8">
+        <div class="w-full max-w-md px-8 py-6 mx-auto bg-white rounded-lg shadow-md">
+            <h2 class="text-4xl text-black">Let's get started!</h2>
+            <p class="mt-2 text-sm text-gray-500">
+                Create your account to access your dashboard and manage your projects.
+            </p>
+            <form class="mt-4 space-y-6">
+                <input autocomplete="false" name="hidden" style="display: none">
+                <input name="_redirect" type="hidden" value="#">
+                <div>
+                    <label class="block mb-3 text-sm font-medium text-gray-600" name="username">
+                        Username or Email
+                    </label>
+                    <input class="block w-full px-6 py-3 text-black bg-transparent border border-gray-200 appearance-none rounded-xl placeholder:text-gray-400 focus:bg-transparent focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm placeholder-opacity-50" placeholder="Your username or email" autocomplete="off" type="text" required>
+                </div>
+                <div>
+                    <label class="block mb-3 text-sm font-medium text-gray-600" name="password">
+                        Password
+                    </label>
+                    <input class="block w-full px-6 py-3 text-black bg-transparent border border-gray-200 appearance-none rounded-xl placeholder:text-gray-400 focus:bg-transparent focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm placeholder-opacity-50" placeholder="Your password" autocomplete="off" type="password" required>
+                </div>
+                <div>
+                    <label class="block mb-3 text-sm font-medium text-gray-600" name="password_confirmation">
+                        Confirm Password
+                    </label>
+                    <input class="block w-full px-6 py-3 text-black bg-transparent border border-gray-200 appearance-none rounded-xl placeholder:text-gray-400 focus:bg-transparent focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:text-sm placeholder-opacity-50" placeholder="Repeat your password" autocomplete="off" type="password" required>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id ="remember-me" class="w-4 h-4 mr-2 text-blue-500 border-gray-300 rounded focus:ring-blue-500" name="remember" type="checkbox">
+                        <label for="remember-me" class="text-sm text-gray-600" name="remember">
+                            Remember me
+                        </label>
+                    </div>
+                </div>
+                <div>
+                    <button class="items-center justify-center w-full px-6 py-2.5 text-center text-white duration-200 bg-black border-2 border-black rounded-full nline-flex hover:bg-transparent hover:border-black hover:text-black focus:outline-none focus-visible:outline-black text-sm focus-visible:ring-black" type="submit">
+                        Sign up
+                    </button>
+                </div>
+                <div class="mt-4">
+                    <span class="text-sm text-center text-gray-600">
+                        Already have an account? <a class="text-blue-500 no-underline hover:underline" href="{% url 'login' %}">Sign in</a>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{%endblock%}
